@@ -25,4 +25,4 @@ first time Check করবে আমরা আমদের dives এ Node.js and
 2nd
 npm init -y এইটা দিয়ে package.json file তৈরি করবে যেইটায় সব package er info থাকে verson thale suru kore sob kisu thake package.json file তৈরি করবে। 
 
-npm install express দিয়ে express 
+npm install express দিয়ে express install করে নিব তারপর আমরা চোট একটা server Create করব express diye index.js file a 
