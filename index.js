@@ -14,7 +14,7 @@ const app = Express()
 
 //============================ routing ============================
 
-// get routing এর ভিতর ২ টা জিনিস সব সময় থাকে ১ টা request and respores request হল url  এ কি request করবে অ্যান্ড রেস্পন্স হইতেছে ওই request এ কি body তে কি দেখাবে expres js a all time 1st prameter requset and 2nd respores body তে কোন কিছু দেখিতে চাইলে respose.Send(যা দিব তাই শো হবে body তে )
+// get routing এর ভিতর ২ টা জিনিস সব সময় থাকে ১ টা request and respones request হল url  এ কি request করবে অ্যান্ড রেস্পন্স হইতেছে ওই request এ কি body তে কি দেখাবে expres js a all time 1st prameter requset and 2nd respones body তে কোন কিছু দেখিতে চাইলে response.Send(যা দিব তাই শো হবে body তে )
 
 app.get("/", (req , res )=>{
 res.send('hello Express!')

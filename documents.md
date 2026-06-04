@@ -80,3 +80,21 @@ example : /search?name=rahim&age=25
                  key=value   আরেকটা key=value
 
 ? পরে যা থালে সেইটা হলিও key and = এর পর কী ভালু 
+
+
+
+===================== request and response =====================================================
+
+expres js er routing er main হল request and response 
+
+request  (req) object কি ?
+
+Request হলো Client (Browser, Postman) থেকে Server-এর কাছে পাঠানো তথ্য বা অনুরোধ। Express.js-এ এই Request Object-কে req দ্বারা প্রকাশ করা হয়।
+
+req object ভিতর থাকে 
+১, ইউজার এর পাঠানো ডাটা 
+২। URL and rout 
+৩। HTTP মেথড (get , post , delet , fech ...)
+৪। header browser info 
+৫। query parameters (যেমন search ? name=sofik)
+৬। Body Data (from and json)
