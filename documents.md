@@ -99,3 +99,17 @@ req object ভিতর থাকে
 ৪। header browser info 
 ৫। query parameters (যেমন search ? name=sofik)
 ৬। Body Data (from and json)
+
+
+=========================== response ============================================
+response (res) object কি ?
+
+Response হলো ক্লায়েন্টের (Client) পাঠানো Request-এর বিপরীতে সার্ভার (Server) যে উত্তর বা তথ্য ফেরত পাঠায় তাকে Response বলে। 
+
+response হিসেবে আমরা যা যা data পাঠাইতে পারি 
+ 1. HTML
+ 2. TEXT
+ 3. JSON
+ 4. file 
+ 5. rederice 
+
