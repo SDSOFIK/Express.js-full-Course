@@ -20,6 +20,12 @@ app.get("/about", (req , res)=>{
 res.send("about Page")
 })
 
+// dynamic routing crete kore সময় মনে রাখেতে হবে url :unic name দিতে হবে যেকোন নামে হইতে পারে কিন্তু এইখআনে যে নামে হবে সেম ভিতর এই নামে হবে 
+app.get("/user/:id", (req, res )=>{
+    // req.params দিয়ে url এ যা দিয়ে হিট করবে সেই টা নিয়ে userID te store korbe 
+    let userID = req.params.id
+    res.status(200).send(userID);
+})
 
  
 // Server Create 

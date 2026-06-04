@@ -60,3 +60,12 @@ https://www.usebruno.com/
 routing হল কোন url a requres পাঠালে কি respones করবে তা নির্ধারণ করে server 
 
 যেমন / a থাকলে কি দেখাবে এবং /about url a কি দেখাবেserver তা ঠিক করে index.js fila a dakhi 
+
+
+================ dynamic Routing ===============================
+dynamic routing হল এমন একটা রউট যে পরিবতনশিল  যে কন হইতা পারে আর সেই value route থেকে ধরে ব্যবহার করা হল dynamic routing 
+
+আমরা মনে করি আমদের একটা ক্লাস আছে সেইখানে অনেক গুলা স্টুডেন্ট আছে এখন ত আমরা সবার অন্য আলাদা আলাদে করে routing বানাব না তাই তখন একটা dynamic route crete korbo 
+
+dynamic route create kore সময় url er sane :দিয়ে একটা unic name or id দিতে হবে মনে রাখতে হবে সামে নামে জেন হয় ভিতর  এ এবং বাইরে 
+
