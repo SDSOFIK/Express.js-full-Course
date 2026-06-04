@@ -5,6 +5,7 @@
 const Express = require("express")
 //Express store app
 const app = Express()
+const path = require("path")
 
 
 // router Setup 
@@ -43,9 +44,17 @@ app.get("/serch", (req, res )=>{
     res.send(`name is ${name}. and age is ${age}`)
 })
 
+// ===================respons sendFile html file ================
+app.get("/home", (req, res)=>{
+   
+    res.status(200).sendFile(path.join(__dirname, 'index.html'))
+});
 
+//=================== redirect ======================== 
+app.get("/old-page", (req, res)=>{
 
-
+    res.redirect("/new-page")
+})
  
 // Server Create 
 app.listen(3000, ()=>{
