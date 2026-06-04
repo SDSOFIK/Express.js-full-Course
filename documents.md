@@ -25,9 +25,9 @@ first time Check করবে আমরা আমদের dives এ Node.js and
 2nd
 npm init -y এইটা দিয়ে package.json file তৈরি করবে যেইটায় সব package er info থাকে verson thale suru kore sob kisu thake package.json file তৈরি করবে। 
 
-npm install express দিয়ে express install করে নিব তারপর আমরা চোট একটা server Create করব express diye index.js file a 
+npm install express দিয়ে express install করে নিব তারপর আমরা ছোট একটা server Create করব express diye index.js file a 
 
-
+index. js file call express.js requre(Expres.js)
 
 ================= Postman =================== 
 
@@ -50,4 +50,13 @@ https://www.postman.com/downloads/
 এই links থেকে windos বা mac er জন্য download করে setup kore nite hbe 
 
 
-same amn brono 
+same amn bruno API 
+
+
+https://www.usebruno.com/
+
+================== Express Routing =========================
+
+routing হল কোন url a requres পাঠালে কি respones করবে তা নির্ধারণ করে server 
+
+যেমন / a থাকলে কি দেখাবে এবং /about url a কি দেখাবেserver তা ঠিক করে index.js fila a dakhi 

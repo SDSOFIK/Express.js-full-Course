@@ -11,9 +11,11 @@ const app = Express()
 
 // aap .get url এ জেখন  / hit করবে তখন এই পেজ কাজ করবে আমরা Express js দিয়ে সহজে ruter config করতে পারি express js diye যেইটা node js দিয়ে করতে অনেক কিছু করতে হয় if eles লাগে যা express js a lage na 
 
+// get routing 
 app.get("/", (req , res )=>{
 res.send('hello Express!')
 })
+
 app.get("/about", (req , res)=>{
 res.send("about Page")
 })
