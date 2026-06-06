@@ -5,7 +5,13 @@
 const Express = require("express")
 //Express store app
 const app = Express()
+
+// call path 
 const path = require("path")
+
+// body thke json data পাঠানোর জন্য 
+
+app.use(Express.json());
 
 
 // router Setup 
@@ -28,11 +34,11 @@ res.send("about Page")
 // ====================== dynamic routing ===============================
 
 // dynamic routing crete kore সময় মনে রাখেতে হবে url :unic name দিতে হবে যেকোন নামে হইতে পারে কিন্তু এইখআনে যে নামে হবে সেম ভিতর এই নামে হবে 
-app.get("/user/:id", (req, res )=>{
-    // req.params দিয়ে url এ যা দিয়ে হিট করবে সেই টা নিয়ে userID te store korbe 
-    let userID = req.params.id
-    res.status(200).send(userID);
-})
+// app.get("/user/:id", (req, res )=>{
+//     // req.params দিয়ে url এ যা দিয়ে হিট করবে সেই টা নিয়ে userID te store korbe 
+//     let userID = req.params.id
+//     res.status(200).send(userID);
+// })
 
 // ==================== Url Query =====================
 app.get("/serch", (req, res )=>{
@@ -56,6 +62,94 @@ app.get("/old-page", (req, res)=>{
     res.redirect("/new-page")
 })
  
+
+
+// ====================== Handling HTTP Methods- GET POST PUT DELETE =====================
+
+let user =[
+{
+    "id": 1,
+    "name" : "Sofik",
+    "Email" : "sofik2002@gamil.com",
+    "mobile": "01315116027"
+},
+{
+    "id": 2,
+    "name" : "Rofik",
+    "Email" : "rofik@gamil.com",
+    "mobile": "013100000"
+},
+{
+    "id": 3,
+    "name" : "salam",
+    "Email" : "salam@gamil.com",
+    "mobile": "01715116027"
+},
+{
+    "id": 4,
+    "name" : "raju",
+    "Email" : "raju@gamil.com",
+    "mobile": "0122294004"
+},
+{
+    "id": 5,
+    "Name" : "naeim",
+    "Email" : "naeim@gamil.com",
+    "Mobile": "0178876027"
+},
+]
+
+
+// get method  only date read 
+app.get("/user", (req, res)=>{
+    res.status(200).json({
+        success: true,
+        total : user.length,
+         Data : user
+    })
+})
+
+// যে কেন একটা ডাটা যদি দেখতে চাই তার id দিয়ে 
+
+app.get("/user/:id", (req , res)=>{
+    let users = user.find(u=>u.id === parseInt(req.params.id));
+    if(!users){
+        res.status(404).json({
+            success : false,
+            message : `sorry ${req.params.id} note Fund !`
+        });
+
+    };
+    res.status(200).json({
+        success: true,
+        Data : users
+    })
+});
+
+//================== PUST new data create =================
+
+app.post("/user", (req, res)=>{
+    const {Name , Email , Mobile } = req.body;
+
+    if(!Name || !Email || !Mobile){
+        return   res.status(400).send("plese name or emaile and mobile numer ")
+    };
+    let addUser ={
+        id: user.length + 1,
+        Name,
+        Email ,
+        Mobile
+
+    };
+    user.push(addUser);
+
+    res.status(200).json({
+        success: true,
+        data: addUser 
+    });
+});
+
+
 // Server Create 
 app.listen(3000, ()=>{
     console.log("Server runnig.......")
