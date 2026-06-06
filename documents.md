@@ -155,3 +155,15 @@ postman post json data sending rule 1. select body 2. select raw and json data e
     "Mobile": "01315116027"
 }
 send data 
+
+Post Method কখন ব্যবহার করবে:
+
+নতুন user register → POST /register
+নতুন post তৈরি → POST /posts
+Login → POST /login
+
+
+======================= put =========================== 
+
+put------- PUT হলো একটি HTTP Method যা existing resource/data-কে update বা replace করার জন্য ব্যবহৃত হয়।
+

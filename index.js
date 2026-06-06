@@ -150,6 +150,29 @@ app.post("/user", (req, res)=>{
 });
 
 
+//================= PUT =====================================
+app.put("/user/:id", (req , res)=>{
+    const index = user.findIndex(u =>u.id === parseInt(req.params.id))
+    if(index === -1){
+        return res.status(404).json({
+            success: false,
+            message: `not valid this ID: ${req.params.id} `
+        });
+    };
+    const {Name , Email , Mobile} = req.body
+    
+    user[index] ={
+        id: parseInt(req.params.id),
+        Name,
+        Email,
+        Mobile
+    }
+    res.status(200).json({
+        Succes: true,
+    data: user[index]
+    })
+})
+
 // Server Create 
 app.listen(3000, ()=>{
     console.log("Server runnig.......")
