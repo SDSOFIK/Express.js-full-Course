@@ -167,3 +167,11 @@ Login → POST /login
 
 put------- PUT হলো একটি HTTP Method যা existing resource/data-কে update বা replace করার জন্য ব্যবহৃত হয়।
 
+postman a update করার সময়ে body থেকে ডাটা দিতে হবে এবং সেই ডাটা টা update and edite করা যায় 
+
+============================ delete ==========================
+
+delete হল কোন ডাটা কে delete করতে চাইলে delete method use করি 
+
+
+

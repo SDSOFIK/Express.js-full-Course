@@ -173,6 +173,22 @@ app.put("/user/:id", (req , res)=>{
     })
 })
 
+
+// ===================== delete method ===============================
+app.delete("/user/:id", (req, res)=>{
+let index = user.findIndex(u=>u.id === parseInt(req.params.id))
+if(index === -1){
+   return res.status(404).json({
+        success: false ,
+        message : `sorry ${req.params.id} not valid`
+    })};
+    const deleted = user.splice(index , 1);
+    res.status(200).json({
+        success: true,
+        data : deleted
+    })
+})
+
 // Server Create 
 app.listen(3000, ()=>{
     console.log("Server runnig.......")
