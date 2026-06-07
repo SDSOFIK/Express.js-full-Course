@@ -174,4 +174,27 @@ postman a update করার সময়ে body থেকে ডাটা দি
 delete হল কোন ডাটা কে delete করতে চাইলে delete method use করি 
 
 
+============ nodemon  ==================================
+
+Nodemon হলো একটি development tool যা Node.js application-এর source code পরিবর্তন হলে স্বয়ংক্রিয়ভাবে server restart করে, ফলে developer-কে বারবার manually server restart করতে হয় না।
+
+setup 
+যদি সধু প্রোজেক্ট ১ টায় চাই তাহলে 
+Project এ install
+npm install --save-dev nodemon
+
+all file install npm install -g nodemon
+
+তারপর package.json 
+
+{
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  }
+}
+
+npm run dev dile all time colte takbe ?
+
+
 
