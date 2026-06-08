@@ -3,9 +3,12 @@
 
 // call express js and store Express 
 const Express = require("express")
+
+// cookie 
+const cookie = require("cookie-parser")
 //Express store app
 const app = Express()
-
+app.use(cookie())
 // call path 
 const path = require("path")
 
@@ -63,7 +66,31 @@ app.get("/old-page", (req, res)=>{
 })
  
 
+// page download 
+app.get("/download", (req , res)=>{
+    res.download("./class.pdf")
+  
+})
 
+
+// ================== custom Header set ======================
+app.get("/customHeader", (req, res)=>{
+    res.set("name" , "Sofik")
+    res.send("header set")
+} )
+
+
+// ======================= cookie set up ==================== 
+
+app.get("/cookie", (req , res)=>{
+    res.cookie("user", "Sofik")
+    res.send("cookie set up ")
+});
+
+app.get("/cookieDelet", (req, res)=>{
+res.clearCookie("user");
+res.send("cookie deleted")
+});
 // ====================== Handling HTTP Methods- GET POST PUT DELETE =====================
 
 let user =[

@@ -20,6 +20,7 @@
   "homepage": "https://github.com/SDSOFIK/Express.js-full-Course#readme",
   "description": "",
   "dependencies": {
+    "cookie-parser": "^1.4.7",
     "express": "^5.2.1"
   },
   "devDependencies": {

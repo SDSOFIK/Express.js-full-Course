@@ -115,6 +115,14 @@ res.json{
 }
  4. file 
  5. rederice 
+ 6. Download 
+
+কোন ফাইল যদি আমরা Download করতে চাই ইউজার কে থলে Download use kori 
+res.Download(fille addrs)
+
+
+========================== Response Header========================
+header কোন ডাটা পাঠালে আমরা res.set dile header data send kori and header a সব সময় ২ টা ডাটা পাঠাইতে হয় একটা নাম এবং একটা ভেলু  
 
 ========================= response status code =========================
 
@@ -194,7 +202,31 @@ all file install npm install -g nodemon
   }
 }
 
+
 npm run dev dile all time colte takbe ?
 
 
 
+অথবা 
+
+{
+  "scripts":{
+    "start": nodemon index.js
+  }
+}
+npm start dile server on hoy jabe 
+
+
+
+
+
+================================ cookie set up ============================
+
+cookie হলো ব্রাউজারে সংরক্ষিত ছোট একটি ডাটা যা সার্ভার এবং ব্রাউজারের মধ্যে তথ্য আদান প্রদানের জন্য ব্যবহার করা হয়
+
+যেমন Login Session ধরে রাখার জন্য User Preference সংরক্ষণ করার জন্য
+
+cookie npm থেকে install kore nibo 
+
+npm install cookie-parser
+ cookie কল করে app.cookie diye all server a cookie pathi jabe 
