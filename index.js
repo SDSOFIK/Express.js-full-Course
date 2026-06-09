@@ -27,12 +27,20 @@ app.use(Express.json());
 // get routing এর ভিতর ২ টা জিনিস সব সময় থাকে ১ টা request and respones request হল url  এ কি request করবে অ্যান্ড রেস্পন্স হইতেছে ওই request এ কি body তে কি দেখাবে expres js a all time 1st prameter requset and 2nd respones body তে কোন কিছু দেখিতে চাইলে response.Send(যা দিব তাই শো হবে body তে )
 
 app.get("/", (req , res )=>{
-res.send('hello Express!')
+res.status(200).sendFile(path.join(__dirname, 'index.html'))
 })
 
 app.get("/about", (req , res)=>{
 res.send("about Page")
 })
+
+// =============================== middeware =======================
+const myMeddleware = (req, res , next)=>{
+console.log(" this middleware")
+req.currentTime = new Date(Date.now())
+
+next();
+};
 
 // ====================== dynamic routing ===============================
 
@@ -44,19 +52,22 @@ res.send("about Page")
 // })
 
 // ==================== Url Query =====================
-app.get("/serch", (req, res )=>{
+app.get("/serch",  (req, res )=>{
 
     // query.name যে দিতেছি সেমা এই নামে  এ url er key থাকতে হবে 
     let name = req.query.name;
     let age = req.query.age;
 
     res.send(`name is ${name}. and age is ${age}`)
+   
 })
 
 // ===================respons sendFile html file ================
-app.get("/home", (req, res)=>{
+app.get("/home", myMeddleware, (req, res)=>{
    
     res.status(200).sendFile(path.join(__dirname, 'index.html'))
+    console.log(req.currentTime)
+  
 });
 
 //=================== redirect ======================== 

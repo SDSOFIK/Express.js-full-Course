@@ -230,3 +230,27 @@ cookie npm থেকে install kore nibo
 
 npm install cookie-parser
  cookie কল করে app.cookie diye all server a cookie pathi jabe 
+
+
+
+
+
+
+ ============================= Middleware =======================================
+
+ Express.js এ Middleware হলো এমন একটা function যেটা Request (req) আর Response (res) এর মাঝখানে কাজ করে।
+ যে কোন routing er client request দেওয়ার সময় response দেওয়ার আগে Middleware চেক করে তারপর Next Route Handler এ পাঠায়    Middleware ৩ টা params থাকে req , res , next যদি সব ঠিক থাকে তাহলে next দিয়ে পরে কাজ সুরু করে ।
+
+ সহজ কথায়, middleware হলো এমন একটা function যেটা request আসা আর response যাওয়ার মাঝখানে কাজ করে। প্রতিটা middleware-এর হাতে থাকে তিনটা জিনিস:
+
+ req  → আসা request object
+res  → পাঠানো response object
+next → পরের middleware-কে ডাকার function
+
+Middleware-এর ৫ ধরন
+
+Application-level middleware — পুরো app-এ apply হয়।
+Router-level middleware — নির্দিষ্ট route-এ apply হয় ।
+Built-in middleware — Express-এর নিজের ।
+Third-party middleware — npm থেকে ইনস্টল করে ।
+Error-handling middleware — ৪টা parameter লাগবেই ।
