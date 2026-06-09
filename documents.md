@@ -254,3 +254,6 @@ Router-level middleware — নির্দিষ্ট route-এ apply হয�
 Built-in middleware — Express-এর নিজের ।
 Third-party middleware — npm থেকে ইনস্টল করে ।
 Error-handling middleware — ৪টা parameter লাগবেই ।
+
+
+২ ভাবে middleware কাজ করে ১ একটা একটা করে ২ app.use যদি দেই তাহলে সব router a কাজ করবে 
