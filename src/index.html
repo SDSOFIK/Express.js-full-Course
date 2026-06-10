@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ExpressApp — Fast Node.js Framework</title>
+  <!-- google fonts links  -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <!-- css links -->
+  <link rel="stylesheet" href="style.css">
+<!-- taitwind links  -->
+     <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#" class="logo">
+      <span class="logo-dot"></span>
+      ExpressApp
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">হোম</a></li>
+      <li><a href="#">ডকস</a></li>
+      <li><a href="#">টিউটোরিয়াল</a></li>
+      <li><a href="#">যোগাযোগ</a></li>
+    </ul>
+    <button class="nav-cta">শুরু করো →</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">⚡ Node.js এর সেরা Framework</div>
+    <h1>দ্রুত ও সহজে বানাও<br><em>Web API & Server</em></h1>
+    <p>Express.js দিয়ে মিনিটের মধ্যে REST API, routing, middleware — সব কিছু তৈরি করো।</p>
+    <div class="hero-btns">
+      <button class="btn-primary">শুরু করো</button>
+      <button class="btn-ghost">ডকুমেন্টেশন</button>
+    </div>
+    <div class="code-wrap">
+      <div class="code-dots">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+      </div>
+      <pre><span class="tk-comment">// প্রথম Express server</span>
+<span class="tk-keyword">const</span> express = <span class="tk-fn">require</span>(<span class="tk-str">'express'</span>);
+<span class="tk-keyword">const</span> app = <span class="tk-fn">express</span>();
+
+app.<span class="tk-fn">get</span>(<span class="tk-str">'/'</span>, (req, res) =&gt; {
+  res.<span class="tk-fn">send</span>(<span class="tk-str">'হ্যালো World!'</span>);
+});
+
+app.<span class="tk-fn">listen</span>(<span class="tk-num">3000</span>);
+<span class="tk-comment">// → Server চলছে port 3000-এ</span></pre>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section">
+    <div class="section-header">
+      <h2>কেন Express.js?</h2>
+      <p>সহজ, দ্রুত, এবং শক্তিশালী — প্রতিটি project-এর জন্য</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon icon-teal">🛣️</div>
+        <h3>Routing</h3>
+        <p>সহজে যেকোনো URL route define করো এবং dynamic parameter ব্যবহার করো।</p>
+      </div>
+      <div class="card">
+        <div class="card-icon icon-blue">🔧</div>
+        <h3>Middleware</h3>
+        <p>Request ও response এর মাঝে custom logic চালাও — auth, logging, validation।</p>
+      </div>
+      <div class="card">
+        <div class="card-icon icon-purple">🔌</div>
+        <h3>REST API</h3>
+        <p>GET, POST, PUT, DELETE সব HTTP method সাপোর্ট করে অনায়াসে।</p>
+      </div>
+      <div class="card">
+        <div class="card-icon icon-amber">🚀</div>
+        <h3>দ্রুত গতি</h3>
+        <p>Lightweight হওয়ায় production-এ অনেক দ্রুত কাজ করে কম resource-এ।</p>
+      </div>
+    </div>
+  </section>
+
+<!-- get post quray requst  -->
+ <section class="bg-[#0e1c16] text-white ">
+<div class=" max-w-6xl mx-auto">
+  <div class="grid grid-cols-6 gap-5 ">
+    <button class="rounded-md p-2 m-2 mt-10 border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="simplyGat()">Simply GET</button>
+    <button class="rounded-md p-2 m-2 mt-10 border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="getQuery()">GET+Query</button>
+    <button class="rounded-md p-2 m-2 mt-10 border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="getHeater()">GET Header</button>
+    <button class="rounded-md p-2 m-2 mt-10 border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="Middleware()">Middleware</button>
+    <button class="rounded-md p-2 m-2 mt-10 border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="simplePost()">Simply Post</button>
+    <button class="rounded-md p-2 m-2 mt-10 border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="postQuery()">POST+Query</button>
+    <button class="rounded-md p-2 m-2 border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="postHeader()">POST Header</button>
+    <button class="rounded-md p-2 m-2  border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="jsonPost()">JSON POST</button>
+    <button class="rounded-md p-2 m-2 border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="fromData()">From Data</button>
+    <button class="rounded-md p-2 m-2 border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="fileUpload()">File Upload</button>
+    <button class="rounded-md p-2 m-2  border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="getPost()">GET VS POST</button>
+    <button class="rounded-md p-2 m-2  border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="useCas()">কখন কোনটা ?</button>
+    
+  </div>
+</div>
+
+ </section>
+
+
+  <!-- STEPS -->
+  <div class="steps-bg border">
+    <div class="steps-inner">
+      <div class="steps-header">
+        <h2>কিভাবে শুরু করবে?</h2>
+        <p>মাত্র ৩টি ধাপে Express.js সেটআপ করো</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">১</div>
+          <div>
+            <h4>Install করো</h4>
+            <p>Terminal-এ <code>npm install express</code> চালাও।</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">২</div>
+          <div>
+            <h4>Server তৈরি করো</h4>
+            <p>একটা <code>app.js</code> file বানাও এবং উপরের code লেখো।</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">৩</div>
+          <div>
+            <h4>Run করো</h4>
+            <p><code>node app.js</code> চালাও এবং browser-এ <code>localhost:3000</code> খোলো।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    বানানো হয়েছে <span>Express.js</span> দিয়ে — ভালোবাসা সহ ❤️
+  </footer>
+
+
+  <!-- js links -->
+   <script src="main.js"></script>
+</body>
+</html>

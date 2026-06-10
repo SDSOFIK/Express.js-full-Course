@@ -16,6 +16,8 @@ const path = require("path")
 
 app.use(Express.json());
 
+app.use(Express.static(path.join(__dirname, "src")));
+
 
 // router Setup 
 
@@ -27,7 +29,7 @@ app.use(Express.json());
 // get routing এর ভিতর ২ টা জিনিস সব সময় থাকে ১ টা request and respones request হল url  এ কি request করবে অ্যান্ড রেস্পন্স হইতেছে ওই request এ কি body তে কি দেখাবে expres js a all time 1st prameter requset and 2nd respones body তে কোন কিছু দেখিতে চাইলে response.Send(যা দিব তাই শো হবে body তে )
 
 app.get("/", (req , res )=>{
-res.status(200).sendFile(path.join(__dirname, 'index.html'))
+res.status(200).sendFile(path.join(__dirname, "src" ,'index.html'))
 })
 
 app.get("/about", (req , res)=>{
@@ -66,6 +68,7 @@ app.get("/serch",  (req, res )=>{
 app.get("/home", myMeddleware, (req, res)=>{
    
     res.status(200).sendFile(path.join(__dirname, 'index.html'))
+
     console.log(req.currentTime)
   
 });

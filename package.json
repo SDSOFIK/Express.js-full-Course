@@ -20,8 +20,12 @@
   "homepage": "https://github.com/SDSOFIK/Express.js-full-Course#readme",
   "description": "",
   "dependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "@tailwindcss/postcss": "^4.3.0",
     "cookie-parser": "^1.4.7",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
