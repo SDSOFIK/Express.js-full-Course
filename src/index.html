@@ -90,7 +90,7 @@ app.<span class="tk-fn">listen</span>(<span class="tk-num">3000</span>);
 <!-- get post quray requst  -->
  <section class="bg-[#0e1c16] text-white ">
 <div class=" max-w-6xl mx-auto">
-  <div class="grid grid-cols-6 gap-5 ">
+  <div class="grid grid-cols-6 gap-2 ">
     <button class="rounded-md p-2 m-2 mt-10 border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="simplyGat()">Simply GET</button>
     <button class="rounded-md p-2 m-2 mt-10 border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="getQuery()">GET+Query</button>
     <button class="rounded-md p-2 m-2 mt-10 border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="getHeater()">GET Header</button>
@@ -104,6 +104,53 @@ app.<span class="tk-fn">listen</span>(<span class="tk-num">3000</span>);
     <button class="rounded-md p-2 m-2  border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="getPost()">GET VS POST</button>
     <button class="rounded-md p-2 m-2  border border-white/55 cursor-pointer bg-black hover:bg-black/15 hover:border-amber-100 hover:-translate-y-1" onclick="useCas()">কখন কোনটা ?</button>
     
+  </div>
+</div>
+
+<div class="max-w-6xl border rounded-md mx-auto bg-[#30302E] w-full h-lvh">
+  <div class="content max-w-5xl mx-auto m-5">
+
+<h1 id="method" class="w-fit bg-[#1B4614] rounded-lg text-center m-3 p-2 text-white/30">
+  GET
+</h1> 
+<h2 id="methodTitle" class="text-white text-2xl ">Simple GET Request</h2>
+<p id="methodContent" class="text-white/60"> GET request হলো সার্ভার থেকে শুধু ডেটা পড়ার জন্য ব্যবহৃত HTTP method। এটি কোনো ডেটা পরিবর্তন করে না — শুধু response ফেরত দেয়। Express.js-এ app.get() দিয়ে route তৈরি করা হয়।</p>
+<div id="methodCode" class=" bg-black w-[90%] mx-auto m-4 h-96 overflow-auto rounded-lg p-5 " >
+
+const express = require('express'); <br>
+const app = express(); <br>
+
+// Simple GET route 
+<br>
+app.get('/', (req, res) => { <br>
+  res.send('স্বাগতম! এটি একটি GET request।'); <br>
+}); <br>
+
+// JSON response পাঠানো
+<br> 
+app.get('/users', (req, res) => { <br>
+  res.json({ message: 'সব users পাওয়া গেছে', data: [] }); <br>
+}); <br>
+
+app.listen(3000, () => console.log('Server চালু আছে')); <br>
+
+</div>
+  </div>
+</div>
+
+
+<div id="optional" class="max-w-6xl border rounded-md mx-auto bg-[#30302E] w-full h-lvh hidden">
+  <div class="content max-w-5xl mx-auto m-5">
+
+<h1 id="method2" class="w-fit bg-[#1B4614] rounded-lg text-center m-3 p-2 text-white/30">
+  
+</h1> 
+<h2 id="methodTitle2" class="text-white text-2xl "></h2>
+<p id="methodContent2" class="text-white/60"> </p>
+<div id="methodCode2" class=" bg-black w-[90%] mx-auto m-4 h-96 overflow-auto rounded-lg p-5 " >
+
+
+</div>
   </div>
 </div>
 
