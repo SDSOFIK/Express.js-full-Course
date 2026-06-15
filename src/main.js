@@ -9,6 +9,18 @@ let methodTitle2 = document.getElementById("methodTitle2")
 let methodContent2 = document.getElementById("methodContent2")
 let methodCode2 = document.getElementById("methodCode2")
 
+let btns = document.getElementsByClassName("btn");
+
+
+//button active color 
+function activeColor(btn){
+  btns.array.forEach(element => {
+    element.classList.remove("border-2", "border-amber-500");
+  });
+    btn.classList.add("border-2", "border-amber-500");
+
+};
+
 
 // helper tool
 
@@ -23,6 +35,7 @@ function postColorRemove(){
 
 
 function simplyGat(){
+  activeColor()
     optionalHide ()
     postColorRemove()
    method.innerHTML = "GET ";
@@ -55,6 +68,7 @@ app.listen(3000, () => console.log('Server চালু আছে'));
 
 
 function getQuery(){
+  activeColor
     postColorRemove()
     optionalHide ()
    method.innerHTML = "GET ";
