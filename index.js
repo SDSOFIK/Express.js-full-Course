@@ -14,6 +14,9 @@ const path = require("path")
 
 // body thke json data পাঠানোর জন্য 
 
+//dotenv
+require("dotenv").config();
+
 app.use(Express.json());
 
 app.use(Express.static(path.join(__dirname, "src")));
@@ -230,8 +233,9 @@ if(index === -1){
     })
 })
 
+const PORT = process.env.PORT
 // Server Create 
-app.listen(3000, ()=>{
-    console.log("Server runnig.......")
+app.listen(PORT, ()=>{
+    console.log(`server is running http://localhost:${PORT}`)
 })
 

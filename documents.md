@@ -257,3 +257,27 @@ Error-handling middleware — ৪টা parameter লাগবেই ।
 
 
 ২ ভাবে middleware কাজ করে ১ একটা একটা করে ২ app.use যদি দেই তাহলে সব router a কাজ করবে 
+
+
+======================================= .env setup ===========================================
+
+what is a .env file 
+
+env file ব্যবহার করা হয় environment variables সংরক্ষণ করার জন্য। অর্থাৎ, এমন তথ্য রাখার জন্য যা কোডের মধ্যে সরাসরি লিখে রাখা উচিত নয়। সেইটা .env ফাইলে লিখে রাখি যেমন 
+
+Database password
+API Key
+JWT Secret
+Email password
+
+Sensitive তথ্য লুকিয়ে রাখতে .env use করা হয় 
+
+setup 
+1. file a name .env দিতে হবে 
+2. veriable name Capital later দিতে হবে কন ফাকা দেওয়া যাবে না _ use করতে হবে  .env file কোন ডাটা টাইপ হয় না 
+3. npm install dotenv ইন্সটল করে নিতে হবে 
+4. serve.js a input kore nite hbe dotenv ke 
+5. process.env.veriable name দিয়ে acess করতে হবে 
+6. .env File সব সময় main ফাইল রাখতে হবে 
+
+এভাবে secret তথ্য নিরাপদ থাকে এবং production server-এ আলাদা configuration ব্যবহার করা যায়।
