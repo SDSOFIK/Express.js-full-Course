@@ -281,3 +281,19 @@ setup
 6. .env File সব সময় main ফাইল রাখতে হবে 
 
 এভাবে secret তথ্য নিরাপদ থাকে এবং production server-এ আলাদা configuration ব্যবহার করা যায়।
+
+
+
+
+======================================== multer ===========================
+
+multer হল কোন image file ba video file server এ জমা রাখার জন্য use করা হয়ে 
+
+multer setup 
+
+npm install multer
+requre()
+
+html file from a must be enctype="multipart/form-data"> রাখতে হবে 
+
+upload.single বা array jodi ১ টা ইমেজ নিতে চাই তাহলে  single and অনেক গুলা ইমেজ নিতে চাইলে আররা উসে করব html input a a নামে যা দিবে ঠিক তাই upload.single("দিতে হবে ") পোস্ট মেথড হবে  enctype="multipart/form-data"> দিতে হবে ফ্রম এ 

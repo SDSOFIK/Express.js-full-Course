@@ -22,6 +22,10 @@ app.use(Express.json());
 app.use(Express.static(path.join(__dirname, "src")));
 
 
+// multer 
+
+const upload = require("./middleware/middlewar")
+
 // router Setup 
 
 // aap .get url এ জেখন  / hit করবে তখন এই পেজ কাজ করবে আমরা Express js দিয়ে সহজে ruter config করতে পারি express js diye যেইটা node js দিয়ে করতে অনেক কিছু করতে হয় if eles লাগে যা express js a lage na 
@@ -232,6 +236,23 @@ if(index === -1){
         data : deleted
     })
 })
+
+
+app.post("/profile" ,upload.single("image"), (req,res)=>{
+
+res.send(`
+    <h2>Image Upload Successful!</h2>
+    <a href="/">
+      <button>Go Back Home</button>
+    </a>
+  `);
+
+})
+
+
+
+
+
 
 const PORT = process.env.PORT
 // Server Create 
